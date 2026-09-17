@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
+    "name": "Distributed Rate Limiter Service API",
+    "description": "Postman Collection for testing Token Bucket, Sliding Window, and Metrics endpoints of Distributed Rate Limiter.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Token Bucket Rate Limit Test",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Id",
+            "value": "user_postman_1",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/resource?algo=token-bucket",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "resource"],
+          "query": [
+            {
+              "key": "algo",
+              "value": "token-bucket"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sliding Window Rate Limit Test",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-User-Id",
+            "value": "user_postman_2",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/resource?algo=sliding-window",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "resource"],
+          "query": [
+            {
+              "key": "algo",
+              "value": "sliding-window"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Rate Limiter & DB Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/metrics",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "v1", "metrics"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
