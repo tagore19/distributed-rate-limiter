@@ -150,4 +150,5 @@ Includes test coverage for:
 
 ## License
 
-This project is provided under the MIT License for educational and professional demonstration purposes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Copyright (c) 2026 Tagore Reddy Pasham (tagore19).
